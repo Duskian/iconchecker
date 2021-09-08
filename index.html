@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="icon" href="">
+    <style>
+      * { margin: 0; padding: 0; }
+      html, body { width: 100%; height: 100%; background: black !important; }
+      .ui.inverted.card{background-color: transparent !important; }
+      img { width: 100% !important; }
+      .block-container {
+        width: 900px;
+        display: flex;
+        margin: 0 auto;
+      }
+      .img-container {
+        text-align: center;
+        width: 300px;
+        border: 15px solid;
+        padding: 50px;
+        margin: 0 auto;
+        }
+      .text-container {
+          text-align: center;
+      }
+    </style>
+    <script>
+        var text = placeholder
+        function changeVariable(){
+            text = document.getElementById('icon').value;
+            var icontext = "[icon]" + text + "[/icon]"
+            var eicontext = "[eicon]" + text + "[/eicon]"
+            document.getElementById('imageBox').src = "https://static.f-list.net/images/avatar/" + text + ".png";
+            document.getElementById('imageBox2').src = "https://static.f-list.net/images/eicon/" + text + ".gif";
+            document.getElementById('icontextbox').value = icontext
+            document.getElementById('eicontextbox').value = eicontext
+        }
+    </script>
+    <body>
+        <div class="block-container">
+            <div class="img-container">
+                <img src="" id="imageBox"/>
+                <input id="icontextbox"/>
+            </div>
+                <div class="img-container">
+                    <img src="" id="imageBox2"/>
+                    <input id="eicontextbox"/>
+                </div>
+        </div>
+        <div class="text-container">
+            <input type="text" id="icon" ui input onKeyUp="changeVariable()" placeholder="Icon Name..." />
+        </div>
+    </body>
+    <title>F-List.net Icon Checker</title>
+  </head>
+<!--Original credit to "Sexytwilight" See the original at https://sexytwilight.github.io/icons/-->
+</html>
